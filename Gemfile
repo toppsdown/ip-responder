@@ -39,7 +39,9 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 group :development do
-  gem 'sqlite3'
+  gem 'pg'
+  gem 'thin'
+  gem 'pry-rails'
 end
 
 group :production do
