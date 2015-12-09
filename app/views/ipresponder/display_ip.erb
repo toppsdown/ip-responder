@@ -1,3 +1,7 @@
+
+<%= link_to("Home", root_path) %> |
+<%= link_to("Uploader", :controller => :uploader, :action => :index) %>
+<br>
 Your IP: <%= @ip %>
 <ul class='list-group'>
   <% @array.each do |item| %>
