@@ -1,0 +1,24 @@
+<div class='uploader'>
+  <p>Upload your file here</p>
+
+  <%= form_tag({action: :create}, multipart: true) do %>
+  <div class='form-group'>
+    <%= file_field_tag 'uploaded_file' %>
+  </div>
+    <%= submit_tag("upload") %>
+  <% end %>
+
+  <table>
+    <tr>
+      <th>File Path</th>
+      <th>Submitting IP address</th>
+    </tr>
+    <% @files.each do |file|%>
+    <tr>
+      <td><%= file.file_path %></td>
+      <td><%= file.ip %></td>
+    </tr>
+    <% end %>
+    </table>
+  </ul>
+</div>
