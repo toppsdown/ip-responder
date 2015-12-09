@@ -6,8 +6,8 @@ class UploaderController < ApplicationController
   end
 
   def create
-    f = UploadedFile.new({ip: request.ip})
-    f.save_file!(params[:uploaded_file])
+    f = UploadedFile.new({ip: request.ip, file: params[:uploaded_file]})
+    f.save!
 
     @files = UploadedFile.all
     render 'uploader'

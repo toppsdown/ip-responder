@@ -38,6 +38,7 @@ gem 'spring',        group: :development
 
 gem 'bootstrap-sass', '~>3.2.0'
 gem 'sass-rails'
+gem 'carrierwave', '~> 0.10.0'
 
 group :development do
   gem 'pg'
